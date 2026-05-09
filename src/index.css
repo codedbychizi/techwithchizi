@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #1e2a4a;
+    background: #fff;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-brand-blue text-white font-display font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-block border-2 border-brand-blue text-brand-blue font-display font-semibold px-6 py-3 rounded-md transition-all duration-200 hover:bg-brand-blue hover:text-white;
+  }
+  .section-heading {
+    @apply text-3xl md:text-4xl font-display font-bold text-brand-navy;
+  }
+  .section-subheading {
+    @apply text-lg text-gray-500 mt-3 max-w-xl mx-auto;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 42, 74, 0.85) 0%,
+    rgba(59, 91, 219, 0.6) 100%
+  );
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3b5bdb;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up            { animation: fadeUp 0.6s ease forwards; }
+.fade-up-delay-1    { animation: fadeUp 0.6s 0.1s ease forwards; opacity: 0; }
+.fade-up-delay-2    { animation: fadeUp 0.6s 0.2s ease forwards; opacity: 0; }
+.fade-up-delay-3    { animation: fadeUp 0.6s 0.3s ease forwards; opacity: 0; }
