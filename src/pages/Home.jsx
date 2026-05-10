@@ -59,7 +59,7 @@ const portfolio = [
 
   {
     title: 'The Love Alphabet',
-    image: '/thelovealphabet.jpg',
+    image: '/thelovealphabet.png',
     //github: 'https://github.com/codedbychizi/thelovealphabets',
     website: 'https://thelovealphabet.pxxl.click',
   },
@@ -158,20 +158,22 @@ export default function Home() {
             <Link to="/contact" className="btn-primary">CHAT WITH US</Link>
           </div>
           <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-72 h-72 bg-brand-gray rounded-2xl flex items-center justify-center">
-                <svg width="100" height="100" viewBox="0 0 36 36" fill="none">
-                  <rect width="36" height="36" rx="8" fill="#3b5bdb"/>
-                  <circle cx="10" cy="18" r="4" fill="white"/>
-                  <circle cx="26" cy="10" r="4" fill="#00c6ff"/>
-                  <circle cx="26" cy="26" r="4" fill="white"/>
-                  <line x1="14" y1="18" x2="26" y2="10" stroke="white" strokeWidth="2"/>
-                  <line x1="14" y1="18" x2="26" y2="26" stroke="#00c6ff" strokeWidth="2"/>
-                </svg>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-blue rounded-xl opacity-20" />
+          <div className="relative">
+
+            {/* Main Image Card */}
+            <div className="w-72 h-72 rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+              <img
+                src="/about-image.jpg"
+                alt="TechWithChizi Developer"
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            {/* Decorative Glow Box */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-blue rounded-xl opacity-30 blur-sm" />
+
           </div>
+        </div>
         </div>
       </section>
 
@@ -192,6 +194,7 @@ export default function Home() {
       {/* ── Portfolio ── */}
       <section className="py-20 bg-white">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="text-center mb-12"> <h2 className="section-heading">Portfolio</h2> <p className="section-subheading">Designs and Demo Projects to Illustrate My Work</p> </div>
   {portfolio.map(({ title, image, website }) => (
     
     <div
