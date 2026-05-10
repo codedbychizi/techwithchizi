@@ -106,9 +106,7 @@ export default function About() {
   <div className="flex flex-col items-center text-center">
     <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-blue shadow-lg mb-4 flex items-center justify-center">
       {/* <img src="/covenant.jpg" alt="Covenant Chisiebube" className="w-full h-full object-cover rounded-2xl" /> */}
-      <svg className="w-20 h-20 text-white opacity-40" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-      </svg>
+      <img src="/covenant2.jpg" alt="Covenant Chisiebube" className="w-full h-full object-cover rounded-2xl" />
     </div>
     <h3 className="font-display font-bold text-xl text-brand-navy">
       Covenant Chisiebube
@@ -121,15 +119,13 @@ export default function About() {
   {/* Leader 2 */}
   <div className="flex flex-col items-center text-center">
     <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-brand-navy to-brand-blue shadow-lg mb-4 flex items-center justify-center">
-      <svg className="w-20 h-20 text-white opacity-40" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-      </svg>
+      <img src="/milicent.jpg" alt="Milicent Piate" className="w-full h-full object-cover rounded-2xl" />
     </div>
     <h3 className="font-display font-bold text-xl text-brand-navy">
-      Covenant Chisiebube
+      Milicent Piate
     </h3>
     <p className="text-brand-blue font-display text-sm mt-1">
-      Founder &amp; Lead Web Developer
+      Marketing Director
     </p>
   </div>
 </div>

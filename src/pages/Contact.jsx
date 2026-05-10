@@ -153,7 +153,7 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                   </svg>
                 </span>
-                <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noreferrer"
+                <a href="https://wa.me/2347073276471" target="_blank" rel="noreferrer"
                   className="hover:text-brand-blue transition-colors">Chat With Us on WhatsApp</a>
               </li>
             </ul>

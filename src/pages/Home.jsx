@@ -50,11 +50,20 @@ const services = [
 ]
 
 const portfolio = [
-  { label: 'Personal portfolio',          color: 'from-blue-900 to-blue-700' },
-  { label: 'Professional school website', color: 'from-emerald-800 to-emerald-600' },
-  { label: 'Health care service',         color: 'from-slate-700 to-slate-500' },
-  { label: 'Skin care brand',             color: 'from-rose-800 to-rose-600' },
-]
+  {
+    title: 'Neuroprep',
+    image: '/neuroprep.png',
+    //github: 'https://github.com/codedbychizi/neuroprep',
+    website: 'https://neuroprep-seven.vercel.app',
+  },
+
+  {
+    title: 'The Love Alphabet',
+    image: '/thelovealphabet.jpg',
+    //github: 'https://github.com/codedbychizi/thelovealphabets',
+    website: 'https://thelovealphabet.pxxl.click',
+  },
+];
 
 export default function Home() {
   return (
@@ -97,19 +106,41 @@ export default function Home() {
 
           {/* Decorative card */}
           <div className="hidden lg:flex justify-center fade-up fade-up-delay-2">
-            <div className="relative w-72">
-              <div className="bg-white rounded-2xl shadow-2xl p-6 rotate-2">
-                <div className="h-4 bg-brand-gray rounded mb-3 w-3/4" />
-                <div className="h-3 bg-brand-gray rounded mb-2 w-full" />
-                <div className="h-3 bg-brand-gray rounded mb-2 w-5/6" />
-                <div className="h-3 bg-brand-gray rounded mb-4 w-4/5" />
-                <div className="h-8 bg-brand-blue rounded w-1/2" />
-              </div>
-              <div className="absolute -top-4 -right-4 bg-brand-cyan rounded-xl shadow-lg p-3 -rotate-3">
-                <div className="text-white text-xs font-display font-bold">✓ Live &amp; Responsive</div>
-              </div>
-            </div>
-          </div>
+  <div className="relative">
+    
+    {/* Glow Effect */}
+    <div className="absolute inset-0 bg-brand-blue/30 blur-3xl rounded-full"></div>
+
+    {/* Main Image Card */}
+    <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl overflow-hidden shadow-2xl w-[380px]">
+      
+      <img
+        src="/hero-image.jpg"
+        alt="TechWithChizi Developer Setup"
+        className="w-full h-[500px] object-cover"
+      />
+
+      {/* Overlay */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+        <h3 className="text-white text-2xl font-bold mb-2">
+          Building Modern Tech Experiences
+        </h3>
+
+        <p className="text-gray-300 text-sm">
+          Web Development • UI/UX • Creative Tech
+        </p>
+      </div>
+    </div>
+
+    {/* Floating Badge */}
+    <div className="absolute -top-4 -right-4 bg-brand-cyan rounded-2xl shadow-xl px-4 py-3 rotate-3">
+      <div className="text-white text-sm font-bold">
+        ⚡ Live & Responsive
+      </div>
+    </div>
+
+  </div>
+</div>
         </div>
       </section>
 
@@ -160,20 +191,54 @@ export default function Home() {
 
       {/* ── Portfolio ── */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="section-heading">Portfolio</h2>
-            <p className="section-subheading">Designs and Demo Projects to Illustrate My Work</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {portfolio.map(({ label, color }) => (
-              <div key={label} className="group cursor-pointer">
-                <div className={`bg-gradient-to-br ${color} h-40 rounded-xl mb-2 transition-transform duration-200 group-hover:-translate-y-1 group-hover:shadow-lg`} />
-                <p className="text-sm text-gray-500 text-center font-display">{label}</p>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {portfolio.map(({ title, image, website }) => (
+    
+    <div
+      key={title}
+      className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+    >
+      
+      {/* Project Image */}
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-52 object-cover group-hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="p-4">
+        <h3 className="font-bold text-lg mb-3 text-brand-navy">
+          {title}
+        </h3>
+
+        <div className="flex gap-3">
+          
+          {/*<a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:opacity-90"
+          >
+            GitHub
+          </a>*/}
+
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-brand-blue text-white px-4 py-2 rounded-lg text-sm hover:opacity-90"
+          >
+            Live Site
+          </a>
+
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </section>
 
       <CTABanner
