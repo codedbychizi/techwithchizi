@@ -109,7 +109,7 @@ export default function About() {
       <img src="/covenant2.jpg" alt="Covenant Chisiebube" className="w-full h-full object-cover rounded-2xl" />
     </div>
     <h3 className="font-display font-bold text-xl text-brand-navy">
-      Covenant Chisiebube
+      Covenant Chiziebube
     </h3>
     <p className="text-brand-blue font-display text-sm mt-1">
       Founder &amp; Lead Web Developer
