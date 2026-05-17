@@ -192,10 +192,10 @@ export default function Home() {
       </section>
 
       {/* ── Portfolio ── */}
-      <section className="py-20 bg-white">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="py-20 bg-gray-50">
         <div className="text-center mb-12"> <h2 className="section-heading">Portfolio</h2> <p className="section-subheading">Designs and Demo Projects to Illustrate My Work</p> </div>
-  {portfolio.map(({ title, image, website }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {portfolio.map(({ title, image, website }) => (
     
     <div
       key={title}
